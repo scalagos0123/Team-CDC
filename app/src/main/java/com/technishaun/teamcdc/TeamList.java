@@ -26,6 +26,12 @@ public class TeamList extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        Person person1 = new Person("Shaun Cassidy Calagos", "September 28, 1996");
+        String hobbies[] = {"Shaun", ""};
+
+
     }
 
     @Override
