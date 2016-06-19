@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class TeamList extends AppCompatActivity {
+
+    private ArrayList<Person> team;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +35,27 @@ public class TeamList extends AppCompatActivity {
 
 
         Person person1 = new Person("Shaun Cassidy Calagos", "September 28, 1996");
-        String hobbies[] = {"Shaun", ""};
+        String hobbies[] = {"Gaming", "Learning new programming languages"};
+        String interests[] = {"Technology", "Art", "Gaming"};
+        String movies[] = {"Love, Rosie", "Spider-Man"};
+        String games[] = {"Call of Duty", "Battlefield"};
+
+        person1.addMovie(movies);
+
+        LinearLayout layout = (LinearLayout) findViewById(R.id.result);
+
+        for (int i = 0; i < person1.getMovies().size(); i++) {
+
+            TextView text = new TextView(this);
+            text.setText(person1.getMovies().get(i));
+            text.setId(View.generateViewId());
+            int textId = text.getId();
+
+            System.out.println(textId);
+
+            layout.addView(text);
+
+        }
 
 
     }

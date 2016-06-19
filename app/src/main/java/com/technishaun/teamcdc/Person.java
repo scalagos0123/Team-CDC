@@ -1,6 +1,8 @@
 package com.technishaun.teamcdc;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Shaun on 6/19/2016.
@@ -18,6 +20,11 @@ public class Person {
     public Person(String name, String birthday) {
         this.name = name;
         this.birthday = birthday;
+        this.movies = new ArrayList<String>();
+        this.hobbies = new ArrayList<String>();
+        this.interests = new ArrayList<String>();
+        this.songs = new ArrayList<String>();
+        this.games = new ArrayList<String>();
     }
 
     public String getName() {
@@ -36,14 +43,33 @@ public class Person {
         this.birthday = birthday;
     }
 
+    public ArrayList<String> getHobbies() {
+        return hobbies;
+    }
+
+    public ArrayList<String> getInterests() {
+        return interests;
+    }
+
+    public ArrayList<String> getMovies() {
+        return movies;
+    }
+
+    public ArrayList<String> getSongs() {
+        return songs;
+    }
+
+    public ArrayList<String> getGames() {
+        return games;
+    }
+
     public void addHobby(String hobby) {
         hobbies.add(hobby);
     }
 
     public void addHobby(String hobbies[]) {
-        for (int i = 0; i < hobbies.length; i++) {
-            this.hobbies.add(hobbies[i]);
-        }
+        List<String> updateList = Arrays.asList(hobbies);
+        this.hobbies.addAll(updateList);
     }
 
     public void addInterest(String interest) {
@@ -51,9 +77,8 @@ public class Person {
     }
 
     public void addInterest(String interests[]) {
-        for (int i = 0; i < interests.length; i++) {
-            this.interests.add(interests[i]);
-        }
+        List<String> updateList = Arrays.asList(interests);
+        this.interests.addAll(updateList);
     }
 
     public void addMovie(String movie) {
@@ -61,9 +86,8 @@ public class Person {
     }
 
     public void addMovie(String movies[]) {
-        for (int i = 0; i < movies.length; i++) {
-            this.movies.add(movies[i]);
-        }
+        List<String> updateList = Arrays.asList(movies);
+        this.movies.addAll(updateList);
     }
 
     public void addSong(String song) {
@@ -71,9 +95,8 @@ public class Person {
     }
 
     public void addSong(String songs[]) {
-        for (int i = 0; i < songs.length; i++) {
-            this.songs.add(songs[i]);
-        }
+        List<String> updateList = Arrays.asList(songs);
+        this.songs.addAll(updateList);
     }
 
     public void addGame(String game) {
@@ -81,9 +104,8 @@ public class Person {
     }
 
     public void addGame(String games[]) {
-        for (int i = 0; i < games.length; i++) {
-            this.games.add(games[i]);
-        }
+        List<String> updateList = Arrays.asList(games);
+        this.games.addAll(updateList);
     }
 
 }
