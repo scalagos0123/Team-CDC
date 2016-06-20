@@ -15,13 +15,16 @@ import java.util.List;
 
 public class TeamList extends AppCompatActivity {
 
-    private List<Person> team = new LinkedList<Person>();
+    private List<Person> team_details = new LinkedList<Person>();
     private List<String> team_people = new LinkedList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_list);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Team CDC");
 
         /*
 
@@ -33,7 +36,7 @@ public class TeamList extends AppCompatActivity {
         String hobbies[] = new String[]{"Gaming", "Learning new programming languages"};
         String interests[] = {"Technology", "Art", "Gaming"};
         String movies[] = {"Love, Rosie", "Spider-Man"};
-        String games[] = {"Call of Duty", "Battlefield"};
+        String games[] = {"Call of Duty", "Battlefield", "CSGO", "Dota 2"};
 
         person1.addSong(new String[]{"Princess of China", "Every Teardrop is a Waterfall", "Yellow", "Sparks"});
         person1.addMovie(movies);
@@ -41,7 +44,7 @@ public class TeamList extends AppCompatActivity {
         person1.addInterest(interests);
         person1.addHobby(hobbies);
 
-        team.add(person1);
+        team_details.add(person1);
 
 
         /*
@@ -56,7 +59,7 @@ public class TeamList extends AppCompatActivity {
         person2.addMovie(new String[]{"None"});
         person2.addSong(new String[]{"Bring me to Life - Evanescence","Emotion - Carly Rae Jepsen"});
 
-        team.add(person2);
+        team_details.add(person2);
 
         /*
 
@@ -65,13 +68,17 @@ public class TeamList extends AppCompatActivity {
          */
 
         Person person3 = new Person("Bendrhick Co");
-        person3.addSong(new String[]{""});
+        person3.addSong(new String[]{"Middle", "Vanilla Twilignt"});
+        person3.addMovie("Marvel Movies");
+        person3.addInterest(new String[]{"Sleeping", "Swimming", "Working out", "Reading books"});
 
-        for (int i = 0; i < team.size(); i++) {
-            team_people.add(team.get(i).getName());
+        team_details.add(person3);
+
+        for (int i = 0; i < team_details.size(); i++) {
+            team_people.add(team_details.get(i).getName());
         }
 
-        for (int i = 0; i < team.size(); i++) {
+        for (int i = 0; i < team_details.size(); i++) {
             ListView layout = (ListView) findViewById(R.id.result);
             ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, team_people);
             layout.setAdapter(list);
