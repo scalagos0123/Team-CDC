@@ -16,6 +16,7 @@ import java.util.List;
 public class TeamList extends AppCompatActivity {
 
     private List<Person> team = new LinkedList<Person>();
+    private List<String> team_people = new LinkedList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class TeamList extends AppCompatActivity {
 
          */
 
-        Person person2 = new Person("Shaun Cassidy Calagos");
+        Person person2 = new Person("Kat Delfin");
         person2.addGame(new String[]{"Surgeon 3", "Clash Royale"});
         person2.addHobby(new String[]{"Eating", "Sleeping", "Reading", "Watching TV Series"});
         person2.addMovie(new String[]{"None"});
@@ -64,10 +65,17 @@ public class TeamList extends AppCompatActivity {
          */
 
         Person person3 = new Person("Bendrhick Co");
+        person3.addSong(new String[]{""});
 
-        ListView layout = (ListView) findViewById(R.id.result);
-        ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, person1.getMovies());
-        layout.setAdapter(list);
+        for (int i = 0; i < team.size(); i++) {
+            team_people.add(team.get(i).getName());
+        }
+
+        for (int i = 0; i < team.size(); i++) {
+            ListView layout = (ListView) findViewById(R.id.result);
+            ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, team_people);
+            layout.setAdapter(list);
+        }
 
 
     }
