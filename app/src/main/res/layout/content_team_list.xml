@@ -12,10 +12,11 @@
     tools:context="com.technishaun.teamcdc.TeamList"
     tools:showIn="@layout/activity_team_list">
 
-    <LinearLayout
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:id="@+id/result">
-    </LinearLayout>
+
+    </ListView>
+
 </RelativeLayout>

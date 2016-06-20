@@ -2,6 +2,7 @@ package com.technishaun.teamcdc;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,21 +11,41 @@ import java.util.List;
 public class Person {
 
     private String name;
-    private String birthday;
-    private ArrayList<String> hobbies;
-    private ArrayList<String> interests;
-    private ArrayList<String> movies;
-    private ArrayList<String> songs;
-    private ArrayList<String> games;
+//    private String birthday;
+    private List<String> hobbies;
+    private List<String> interests;
+    private List<String> movies;
+    private List<String> songs;
+    private List<String> games;
 
-    public Person(String name, String birthday) {
+    public Person(String name) {
         this.name = name;
-        this.birthday = birthday;
-        this.movies = new ArrayList<String>();
-        this.hobbies = new ArrayList<String>();
-        this.interests = new ArrayList<String>();
-        this.songs = new ArrayList<String>();
-        this.games = new ArrayList<String>();
+//        this.birthday = birthday;
+        this.movies = new LinkedList<String>();
+        this.hobbies = new LinkedList<String>();
+        this.interests = new LinkedList<String>();
+        this.songs = new LinkedList<String>();
+        this.games = new LinkedList<String>();
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public List<String> getInterests() {
+        return interests;
+    }
+
+    public List<String> getMovies() {
+        return movies;
+    }
+
+    public List<String> getSongs() {
+        return songs;
+    }
+
+    public List<String> getGames() {
+        return games;
     }
 
     public String getName() {
@@ -35,33 +56,13 @@ public class Person {
         this.name = name;
     }
 
-    public String getBirthday() {
-        return birthday;
-    }
+//    public String getBirthday() {
+//        return birthday;
+//    }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public ArrayList<String> getHobbies() {
-        return hobbies;
-    }
-
-    public ArrayList<String> getInterests() {
-        return interests;
-    }
-
-    public ArrayList<String> getMovies() {
-        return movies;
-    }
-
-    public ArrayList<String> getSongs() {
-        return songs;
-    }
-
-    public ArrayList<String> getGames() {
-        return games;
-    }
+//    public void setBirthday(String birthday) {
+//        this.birthday = birthday;
+//    }
 
     public void addHobby(String hobby) {
         hobbies.add(hobby);
