@@ -74,15 +74,15 @@ public class TeamList extends AppCompatActivity {
 
         team_details.add(person3);
 
-        for (int i = 0; i < team_details.size(); i++) {
-            team_people.add(team_details.get(i).getName());
-        }
-
-        for (int i = 0; i < team_details.size(); i++) {
-            ListView layout = (ListView) findViewById(R.id.result);
-            ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, team_people);
-            layout.setAdapter(list);
-        }
+//        for (int i = 0; i < team_details.size(); i++) {
+//            team_people.add(team_details.get(i).getName());
+//        }
+//
+//        for (int i = 0; i < team_details.size(); i++) {
+//            ListView layout = (ListView) findViewById(R.id.result);
+//            ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, team_people);
+//            layout.setAdapter(list);
+//        }
 
 
     }
