@@ -68,7 +68,7 @@ public class TeamList extends AppCompatActivity {
          */
 
         Person person3 = new Person("Bendrhick Co");
-        person3.addSong(new String[]{"Middle", "Vanilla Twilignt"});
+        person3.addSong(new String[]{"Middle", "Vanilla Twilight"});
         person3.addMovie("Marvel Movies");
         person3.addInterest(new String[]{"Sleeping", "Swimming", "Working out", "Reading books"});
 
