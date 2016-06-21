@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -15,9 +15,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class TeamList extends AppCompatActivity {
-
-    private List<Person> team_details = new LinkedList<Person>();
-    private List<String> team_people = new LinkedList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,62 +27,39 @@ public class TeamList extends AppCompatActivity {
 
         /*
 
-        1st person = Shaun
+        If you want to programatically add layouts, dito nyo ilagay sa method na to.
+        [Can also be applied to widgets. (ex: TextView) Same format lang din like the example]
+
+        Usage:
+
+        Layout x = new Layout(this);
+
+        Where:
+        - x can be any variable name you want, to call the layout
+        - Layout can be any layout that you want to use (Android API kayo pumunta,
+        sa Design tab nandun yung list of Layouts na pwede nyong gamitin,
+        or yung slides ni Sir Art.
+        - this meaning, the layout will be added for this activity.
+
+        Ex:
+        Linearlayout myLayout = new LinearLayout(this);
+
+        ---------------------------------------------------------
+
+        Q: What if you want to use a layout na nilagay nyo na sa XML file?
+        A: Use the R.id class!
+
+        Usage:
+
+        Layout x = (Layout) findViewById(R.id.y);
+
+        Where:
+        - x can be any variable name
+        - Layout will be the layout na gusto nyong tawagin sa XML file
+        - y will be the element id that you want to call and use here
+        (Can also be applied to widgets (ex. TextView). Same format lang din like the example)
 
          */
-
-        Person person1 = new Person("Shaun Cassidy Calagos");
-        String hobbies[] = new String[]{"Gaming", "Learning new programming languages"};
-        String interests[] = {"Technology", "Art", "Gaming"};
-        String movies[] = {"Love, Rosie", "Spider-Man"};
-        String games[] = {"Call of Duty", "Battlefield", "CSGO", "Dota 2"};
-
-        person1.addSong(new String[]{"Princess of China", "Every Teardrop is a Waterfall", "Yellow", "Sparks"});
-        person1.addMovie(movies);
-        person1.addGame(games);
-        person1.addInterest(interests);
-        person1.addHobby(hobbies);
-
-        team_details.add(person1);
-
-
-        /*
-
-        2nd person = Kat
-
-         */
-
-        Person person2 = new Person("Kat Delfin");
-        person2.addGame(new String[]{"Surgeon 3", "Clash Royale"});
-        person2.addHobby(new String[]{"Eating", "Sleeping", "Reading", "Watching TV Series"});
-        person2.addMovie(new String[]{"None"});
-        person2.addSong(new String[]{"Bring me to Life - Evanescence","Emotion - Carly Rae Jepsen"});
-
-        team_details.add(person2);
-
-        /*
-
-        3rd person = Bendrhick
-
-         */
-
-        Person person3 = new Person("Bendrhick Co");
-        person3.addSong(new String[]{"Middle", "Vanilla Twilight"});
-        person3.addMovie("Marvel Movies");
-        person3.addInterest(new String[]{"Sleeping", "Swimming", "Working out", "Reading books"});
-
-        team_details.add(person3);
-
-//        for (int i = 0; i < team_details.size(); i++) {
-//            team_people.add(team_details.get(i).getName());
-//        }
-//
-//        for (int i = 0; i < team_details.size(); i++) {
-//            ListView layout = (ListView) findViewById(R.id.result);
-//            ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, team_people);
-//            layout.setAdapter(list);
-//        }
-
 
     }
 

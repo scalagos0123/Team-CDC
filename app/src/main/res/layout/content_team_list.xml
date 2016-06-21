@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,16 +9,41 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:orientation="vertical"
     tools:context="com.technishaun.teamcdc.TeamList"
     tools:showIn="@layout/activity_team_list">
 
-    <ListView
+    <!--
+
+    If you want to add layouts in XML derecho (or widgets), either drag and drop, or choose from the list:
+
+    - LinearLayout
+    - RelativeLayout (pwede nyo din gamitin yung included na RelativeLayout na ginawa ng IDE)
+
+    After nyo maglagay ng layouts here, lagyan nyo siya ng android:id attribute.
+
+    Usage:
+
+    <LayoutX android:id="@+id/y"></LayoutX>
+
+    Where:
+    - LayoutX will be your chosen layout
+    - y will be the id to be used para magamit siya from the class (see TeamList.java for use case)
+    (id should be unique, or it will return an error)
+
+    Note:
+    - sa sizing ng elements, you choose [must be an integer with the chosen unit that you want (ex. 30px)]
+    - last resort nyo, gamitin nyong sizing is match_parent (for width and height of elements)
+
+
+    -->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listView"
-        android:layout_weight="1" ></ListView>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/team">
+
+    </LinearLayout>
 
 
-
-</LinearLayout>
+</RelativeLayout>
