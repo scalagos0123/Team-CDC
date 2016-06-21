@@ -12,17 +12,38 @@
     tools:context="com.technishaun.teamcdc.TeamList"
     tools:showIn="@layout/activity_team_list">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/result">
+    <!--
 
-    </ListView>
+    If you want to add layouts in XML derecho (or widgets), either drag and drop, or choose from the list:
+
+    - LinearLayout
+    - RelativeLayout (pwede nyo din gamitin yung included na RelativeLayout na ginawa ng IDE)
+
+    After nyo maglagay ng layouts here, lagyan nyo siya ng android:id attribute.
+
+    Use case:
+
+    <LayoutX android:id="@+id/y"></LayoutX>
+
+    Where:
+    - LayoutX will be your chosen layout
+    - y will be the id to be used para magamit siya from the class (see TeamList.java for use case)
+    (id should be unique, or it will return an error)
+
+    Note:
+    - sa sizing ng elements, you choose [must be an integer with the chosen unit that you want (ex. 30px)]
+    - last resort nyo, gamitin nyong sizing is match_parent (for width and height of elements)
+
+
+    -->
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/team"></LinearLayout>
+        android:id="@+id/team">
+
+    </LinearLayout>
+
 
 </RelativeLayout>
