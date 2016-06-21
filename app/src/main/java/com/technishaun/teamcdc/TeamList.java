@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -74,10 +75,67 @@ public class TeamList extends AppCompatActivity {
 
         team_details.add(person3);
 
-//        for (int i = 0; i < team_details.size(); i++) {
-//            team_people.add(team_details.get(i).getName());
-//        }
+        StringBuffer appendedTexts = new StringBuffer();
+        LinearLayout team_layout = (LinearLayout) findViewById(R.id.team);
+
+        for (int i = 0; i < team_details.size(); i++) {
+            team_people.add(team_details.get(i).getName());
+        }
+
+        for (int i = 0; i < team_people.size(); i++) {
+            TextView name = new TextView(this);
+            name.setText(team_people.get(i));
+            name.setTextSize(30);
+            team_layout.addView(name);
+            System.out.println(team_details.get(i).getGames().size());
+
+            for (int j = 0; j < team_details.get(i).getGames().size(); j++) {
+                appendedTexts.append(team_details.get(j).getGames().get(j) + ", ");
+            }
 //
+            TextView game = new TextView(this);
+            game.setText(appendedTexts);
+            team_layout.addView(game);
+            appendedTexts.delete(0, appendedTexts.lastIndexOf(appendedTexts.toString()));
+
+            for (int j = 0; j < team_details.get(i).getMovies().size(); j++) {
+                appendedTexts.append(team_details.get(j).getMovies().get(j) + ", ");
+            }
+
+            TextView movie = new TextView(this);
+            movie.setText(appendedTexts);
+            team_layout.addView(movie);
+            appendedTexts.delete(0, appendedTexts.lastIndexOf(appendedTexts.toString()));
+
+            for (int j = 0; j < team_details.get(i).getHobbies().size(); j++) {
+                appendedTexts.append(team_details.get(j).getHobbies().get(j) + ", ");
+            }
+
+            TextView hobby = new TextView(this);
+            hobby.setText(appendedTexts);
+            team_layout.addView(hobby);
+            appendedTexts.delete(0, appendedTexts.lastIndexOf(appendedTexts.toString()));
+
+            for (int j = 0; j < team_details.get(i).getInterests().size(); j++) {
+                appendedTexts.append(team_details.get(j).getInterests().get(j) + ", ");
+            }
+
+            TextView interest = new TextView(this);
+            interest.setText(appendedTexts);
+            team_layout.addView(interest);
+            appendedTexts.delete(0, appendedTexts.lastIndexOf(appendedTexts.toString()));
+
+            for (int j = 0; j < team_details.get(i).getSongs().size(); j++) {
+                appendedTexts.append(team_details.get(j).getSongs().get(j) + ", ");
+            }
+
+            TextView song = new TextView(this);
+            song.setText(appendedTexts);
+            team_layout.addView(song);
+            appendedTexts.delete(0, appendedTexts.lastIndexOf(appendedTexts.toString()));
+
+        }
+
 //        for (int i = 0; i < team_details.size(); i++) {
 //            ListView layout = (ListView) findViewById(R.id.result);
 //            ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, team_people);
