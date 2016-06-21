@@ -30,7 +30,7 @@ public class TeamList extends AppCompatActivity {
         If you want to programatically add layouts, dito nyo ilagay sa method na to.
         [Can also be applied to widgets. (ex: TextView) Same format lang din like the example]
 
-        Use case:
+        Usage:
 
         Layout x = new Layout(this);
 
@@ -49,7 +49,7 @@ public class TeamList extends AppCompatActivity {
         Q: What if you want to use a layout na nilagay nyo na sa XML file?
         A: Use the R.id class!
 
-        Use case:
+        Usage:
 
         Layout x = (Layout) findViewById(R.id.y);
 

@@ -21,7 +21,7 @@
 
     After nyo maglagay ng layouts here, lagyan nyo siya ng android:id attribute.
 
-    Use case:
+    Usage:
 
     <LayoutX android:id="@+id/y"></LayoutX>
 
