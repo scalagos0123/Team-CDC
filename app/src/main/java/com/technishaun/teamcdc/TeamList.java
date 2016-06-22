@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
@@ -86,11 +87,14 @@ public class TeamList extends AppCompatActivity {
         for (int i = 0; i < team_people.size(); i++) {
             TextView name = new TextView(this);
             name.setText(team_people.get(i));
-            name.setTextSize(30);
+            name.setTextAppearance(this, android.R.style.TextAppearance_Large);
             team_layout.addView(name);
-            System.out.println(team_details.get(i).getGames().size());
 
-            appendedTexts.append("Games: ");
+
+            TextView game_label = new TextView(this);
+            game_label.setText("Games: ");
+            game_label.setTextAppearance(this, android.R.style.TextAppearance_Medium);
+            team_layout.addView(game_label);
 
             for (int j = 0; j < team_details.get(i).getGames().size(); j++) {
                 appendedTexts.append(team_details.get(i).getGames().get(j) + ", ");
@@ -98,10 +102,14 @@ public class TeamList extends AppCompatActivity {
 
             TextView game = new TextView(this);
             game.setText(appendedTexts);
+            game.setGravity(Gravity.CENTER);
             team_layout.addView(game);
             appendedTexts.delete(0, appendedTexts.length());
 
-            appendedTexts.append("Movies: ");
+            TextView movies_label = new TextView(this);
+            movies_label.setText("Movies: ");
+            movies_label.setTextAppearance(this, android.R.style.TextAppearance_Medium);
+            team_layout.addView(movies_label);
 
             for (int j = 0; j < team_details.get(i).getMovies().size(); j++) {
                 appendedTexts.append(team_details.get(i).getMovies().get(j) + ", ");
@@ -109,10 +117,14 @@ public class TeamList extends AppCompatActivity {
 
             TextView movie = new TextView(this);
             movie.setText(appendedTexts);
+            movie.setGravity(Gravity.CENTER);
             team_layout.addView(movie);
             appendedTexts.delete(0, appendedTexts.length());
 
-            appendedTexts.append("Hobbies: ");
+            TextView hobbies_label = new TextView(this);
+            hobbies_label.setText("Hobbies: ");
+            hobbies_label.setTextAppearance(this, android.R.style.TextAppearance_Medium);
+            team_layout.addView(hobbies_label);
 
             for (int j = 0; j < team_details.get(i).getHobbies().size(); j++) {
                 appendedTexts.append(team_details.get(i).getHobbies().get(j) + ", ");
@@ -120,10 +132,14 @@ public class TeamList extends AppCompatActivity {
 
             TextView hobby = new TextView(this);
             hobby.setText(appendedTexts);
+            hobby.setGravity(Gravity.CENTER);
             team_layout.addView(hobby);
             appendedTexts.delete(0, appendedTexts.length());
 
-            appendedTexts.append("Interests: ");
+            TextView interests_label = new TextView(this);
+            interests_label.setText("Interests: ");
+            interests_label.setTextAppearance(this, android.R.style.TextAppearance_Medium);
+            team_layout.addView(interests_label);
 
             for (int j = 0; j < team_details.get(i).getInterests().size(); j++) {
                 appendedTexts.append(team_details.get(i).getInterests().get(j) + ", ");
@@ -131,10 +147,14 @@ public class TeamList extends AppCompatActivity {
 
             TextView interest = new TextView(this);
             interest.setText(appendedTexts);
+            interest.setGravity(Gravity.CENTER);
             team_layout.addView(interest);
             appendedTexts.delete(0, appendedTexts.length());
 
-            appendedTexts.append("Songs: ");
+            TextView songs_label = new TextView(this);
+            songs_label.setText("Songs: ");
+            songs_label.setTextAppearance(this, android.R.style.TextAppearance_Medium);
+            team_layout.addView(songs_label);
 
             for (int j = 0; j < team_details.get(i).getSongs().size(); j++) {
                 appendedTexts.append(team_details.get(i).getSongs().get(j) + ", ");
@@ -142,6 +162,7 @@ public class TeamList extends AppCompatActivity {
 
             TextView song = new TextView(this);
             song.setText(appendedTexts);
+            song.setGravity(Gravity.CENTER);
             team_layout.addView(song);
             appendedTexts.delete(0, appendedTexts.length());
 //
