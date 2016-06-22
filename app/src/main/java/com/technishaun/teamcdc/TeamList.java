@@ -59,8 +59,9 @@ public class TeamList extends AppCompatActivity {
         Person person2 = new Person("Kat Delfin");
         person2.addGame(new String[]{"Surgeon 3", "Clash Royale"});
         person2.addHobby(new String[]{"Eating", "Sleeping", "Reading", "Watching TV Series"});
-        person2.addMovie(new String[]{"None"});
+        person2.addMovie("Breakfast at Tiffany's");
         person2.addSong(new String[]{"Bring me to Life - Evanescence","Emotion - Carly Rae Jepsen"});
+        person2.addInterest(new String[]{"Game of Thrones", "Make-up", "Writing"});
 
         team_details.add(person2);
 
@@ -74,6 +75,8 @@ public class TeamList extends AppCompatActivity {
         person3.addSong(new String[]{"Middle", "Vanilla Twilight"});
         person3.addMovie("Marvel Movies");
         person3.addInterest(new String[]{"Sleeping", "Swimming", "Working out", "Reading books"});
+        person3.addHobby("None");
+        person3.addGame("None");
 
         team_details.add(person3);
 
