@@ -91,7 +91,7 @@ public class TeamList extends AppCompatActivity {
             name.setTextAppearance(this, android.R.style.TextAppearance_Large);
             team_layout.addView(name);
 
-//          Games
+//            Games
 
             TextView game_label = new TextView(this);
             game_label.setText("Games: ");
