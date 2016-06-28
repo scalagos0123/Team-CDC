@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -221,6 +222,14 @@ public class TeamList extends AppCompatActivity {
             }
         }
 
+        TextView a = (TextView) findViewById(R.id.yas);
+        a.setText("Kat");
+        a.setTextSize(50);
+
     }
 
+    public void methodName(View view) {
+        Button send = (Button) findViewById(R.id.send);
+        send.setText("SEND");
+    }
 }
