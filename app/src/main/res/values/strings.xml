@@ -2,4 +2,9 @@
     <string name="app_name">Team CDC</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_team_list">Team List</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="interests">Interests</string>
+    <string name="songs">Songs</string>
+    <string name="games">Games</string>
+    <string name="movies">Movies</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.technishaun.teamcdc;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -8,7 +9,7 @@ import java.util.List;
 /**
  * Created by Shaun on 6/19/2016.
  */
-public class Person {
+public class Person implements Serializable {
 
     private String name;
 //    private String birthday;
@@ -17,6 +18,7 @@ public class Person {
     private List<String> movies;
     private List<String> songs;
     private List<String> games;
+    private int personId;
 
     public Person(String name) {
         this.name = name;
@@ -107,6 +109,14 @@ public class Person {
     public void addGame(String games[]) {
         List<String> updateList = Arrays.asList(games);
         this.games.addAll(updateList);
+    }
+
+    public void setPersonId (int personId) {
+        this.personId = personId;
+    }
+
+    public int getPersonId() {
+        return personId;
     }
 
 }
